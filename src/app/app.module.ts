@@ -15,6 +15,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './effects/counter.effects';
 import { GiftFeatureModule } from './features/gift-feature/gift-feature.module';
 import { ErrorDisplayComponent } from './components/error-display/error-display.component';
+import { MediaFeatureModule } from './features/media-feature/media-feature.module';
+import { MediaItemComponent } from './features/media-feature/components/media-item/media-item.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +25,11 @@ import { ErrorDisplayComponent } from './components/error-display/error-display.
     CounterComponent,
     NavComponent,
     CountByComponent,
-    ErrorDisplayComponent
+    ErrorDisplayComponent,
+
   ],
   imports: [
+    MediaFeatureModule,
     BrowserModule, // it adds things like *ngIf, *ngFor, etc.
     GiftFeatureModule,
     AppRoutingModule,
